@@ -79,7 +79,7 @@ io.on('connection',socket=>{
     socket.on('join-meeting',(meetingId,userId,username)=>{
         
         socket.join(meetingId)                                  // joined the current socket to the room with id : meetingId
-        if(userId!='xxxxx-chatroom-xxxx')                       //  if userId is 'xxxxx-chatroom-xxxx' it means the user is from a, so no need to send the details required for video call
+        if(userId!='xxxxx-chatroom-xxxx')                       //  if userId is 'xxxxx-chatroom-xxxx' it means the user is from a chatroom, so no need to send the details required for video call
             socket.emit('previous-members',userLinks)
         
         Chat.findOne({meeting_id:meetingId},(er,val)=>{         // checking if the meeting exists or not
@@ -101,7 +101,7 @@ io.on('connection',socket=>{
                     val.chat.forEach(element => {
                         dchat.push(enc(element,-(val.date%7 + 1)%11))
                     });
-                    socket.emit('previous-chat',dchat)          // andd sending it to the new user through socket connection
+                    socket.emit('previous-chat',dchat)          // and sending it to the new user through socket connection
                 }
             }
         })
@@ -110,7 +110,6 @@ io.on('connection',socket=>{
         socket.to(meetingId).emit('user-disconnected',userId)   //  sending the userid of the disconnected user to everyone else in the meeting 
             if(socket.adapter.sids.size == 0) {                 // checking the number of participants connected to the server
                 userLinks ={} ;                                 // if 0 then resetting the userlinks
-               
             }
         })
 
@@ -139,7 +138,7 @@ io.on('connection',socket=>{
             io.in(meetingId).emit('screenshare-started') ;
         })
     
-        socket.on('screenshare-stopped',(userId,meetingId)=>{   // informing everyone in the meeting that someone is sharing screen, if someone stopped sharing screen
+        socket.on('screenshare-stopped',(userId,meetingId)=>{   // informing everyone in the meeting that someone stopped sharing screen, if someone stopped sharing screen
             io.in(meetingId).emit('screenshare-stopped',userId) ;   
         })
     

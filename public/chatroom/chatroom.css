@@ -1,0 +1,95 @@
+html,body{
+    height: 100%;
+    width : 100%;
+    /* background-color: #17223B ; */
+    background-image: url('/tile_background.png');
+    color: #EEEEEE;
+    padding-left: 10%;
+    padding-right: 10%;
+    
+    
+}
+div { height: 100%; width: 100%; }
+h2{
+    display: inline;
+}
+#onMeeting-div{
+    padding-top: 150px;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+#username-div{
+    text-align: center;
+    display: inline-block;
+}
+#username-input{
+    text-align: center;
+    display: inline;
+}
+#meetingId-display-div{
+    display: inline-block;
+    text-align: center;
+    height: auto;
+}
+#meetingId-display-input{
+    display: inline;
+}
+#meetingLink-display-input{
+    display: inline;
+}
+#leaveMeeting-button{
+    background-color: red;
+}
+#joinMeeting-button{
+    color: black;
+    background-color: greenyellow;
+}
+#chat-cover{
+    border-color: black;
+    max-height: 100%;
+    display: inline-block;
+}
+#chat-div{
+    border-color: black;
+    max-height: 80%;
+    display: inline-block;
+}
+#chat-content-div{
+    background-color: #263859 ;
+    /* display: none; */
+    border: 1px none none;
+    border-style: solid ;
+    border-color: black;
+    min-height:20% ;
+    /* height: 50%; */
+    max-height: 70%;
+    width: 80%;
+
+    overflow-y: auto; 
+    overflow-x: auto  ;
+}
+
+#next-message{
+    margin-top: 1%;
+    width: 75%;
+    display: inline;
+}
+
+#sendMessageButton{
+    display: inline;
+}
+
+@media only screen and (max-width: 440px) { 
+    #onMeeting-div{
+        object-fit: fill;
+        padding-top: 220px;
+    }
+    
+}
+#leaveMeeting-button{
+    background-color: red;
+}
+.footer{
+    text-align: center;
+}

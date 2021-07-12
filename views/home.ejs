@@ -1,0 +1,67 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- font awesome -->
+    <script src="https://use.fontawesome.com/edea8e45f9.js"></script> 
+
+    <title>!Teams</title>
+    <!-- custom css -->
+    <link rel="stylesheet" href="home/home.css">
+
+  </head>
+
+  <body class="d-flex flex-column h-100">
+  
+    <%- include  ('partials/header.ejs')  %>
+<main class="flex mt-auto " id="jumbotron-div">
+  <div class="container py-4 jumbotron">
+
+    <div class="row align-items-md-stretch">
+      <div class="col-12 col-md-6 jumbotron">
+        <div class="h-100 p-5 text-white bg-dark rounded-3">
+          <h2>Create a new Meeting ! </h2>
+          <a href="/meet/<%= newMeeting %>" >
+            <button class="btn btn-outline-light" type="button">Click here !</button>
+          </a>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 jumbotron">
+        <div class="h-100 p-5 bg-light border rounded-3">
+          <h2>Join a meeting</h2>
+            <button  class="btn btn-outline-secondary"  onclick=" askId() " >Click here !</button>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row align-items-md-stretch">
+      <div class=" col-12 col-md-6 jumbotron">
+        <div class="h-100 p-5 bg-light border rounded-3">
+          <h2>Create a new Chatroom ! </h2>
+          <a href="/chatroom/<%= newMeeting %>" >
+            <button class="btn btn-outline-secondary" type="button">Click here !</button>
+          </a>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 jumbotron">
+        <div class="h-100 p-5 text-white bg-dark rounded-3">
+          <h2>Join a Chatroom</h2>
+          <button  class="btn btn-outline-light"  onclick=" toChatroom() " type="button" >Click here !</button>
+        </div>
+      </div>
+    </div>
+</div>
+  
+</main>
+
+    
+<%- include  ('partials/footer.ejs')  %>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src=" /home/home.js"></script>
+
+</body>
+
+</html>

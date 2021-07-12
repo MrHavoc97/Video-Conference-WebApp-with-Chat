@@ -1,0 +1,22 @@
+{
+  "name": "video-conference-web-app-v3",
+  "version": "1.0.0",
+  "description": "'Peer to Peer videoConference app using nodejs express socketio peerjs '",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Vaibhav Dixit",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.2",
+    "nodemon": "^2.0.9",
+    "peer": "^0.6.1",
+    "socket.io": "^4.1.2",
+    "uuid": "^8.3.2"
+  }
+}

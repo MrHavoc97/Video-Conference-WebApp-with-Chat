@@ -1,0 +1,131 @@
+html,body{
+    height: 100%;
+    width : 100%;
+    /* background-color: #17223B ; */
+    background-image: url('/tile_background.png');
+    color: #EEEEEE;
+    min-height: 75rem;
+}
+
+div{
+    width: 100%;
+    padding: 1%;
+}
+h2{
+    display: inline;
+}
+#onMeeting-div{
+    display: none;
+    object-fit: fill;
+    height: 100%;
+    width : 100%;
+    padding-top: 5.5rem;
+}
+
+#username-div{
+    text-align: center;
+    display: inline-block;
+}
+#username-input{
+    text-align: center;
+    display: inline;
+}
+#meetingId-display-div{
+    display: inline-block;
+
+}
+#meetingId-display-input{
+    display: inline-block;
+}
+#meetingLink-display-input{
+    display: inline-block;
+}
+#leaveMeeting-button{
+    background-color: red;
+}
+#call-action-div{
+    display: inline-block;
+    text-align:  end;
+}
+#chat-div{
+    z-index: 1000;
+    border: 1px 1px  ;
+    border-style: solid  ;
+    border-color: black;
+    background-color: #292b2c;
+    display: inline-block;
+    max-height: 60%;
+    height: 60%;
+    /* position: fixed; */
+}
+#chat-content-div{
+    background-color: #263859 ;
+    display: inline-block;
+    border: 1px none none;
+    border-style: solid ;
+    border-color: black;
+    height: auto;
+    min-height: 100px;
+    max-height: 300px;
+    width: 100%;
+    padding: 1%;
+    overflow-y: auto;
+    overflow-x: auto  ;
+}
+
+#next-message{
+    width: 80%;
+    display: inline;
+}
+sendMessage-button{
+    display: inline;
+}
+#video-call-div{
+    /* display: inline ; */
+}
+.card{
+    text-align: center;
+    /* display: inline;   */
+    /* height: auto;
+    width: auto;  */
+    max-height:1050px;
+    max-width:1050px;
+    min-height:60px;
+    min-width:60px;
+    background-color: #263859 ;
+}
+.card-body{
+    text-align: center  ;
+    padding: 0;
+}
+video{
+    /* height: auto ;
+    width :auto ; */
+    aspect-ratio: 1.25;
+    max-height:1000px;
+    max-width:1000px;
+    min-height:50px;
+    min-width:50px;
+    margin: 1px;
+    object-fit: cover;
+    z-index: 1;
+}
+
+
+.col{
+    height: auto;
+}
+.row{
+    height: auto;
+}
+
+
+@media only screen and (max-width: 610px) { 
+#onMeeting-div{
+    object-fit: fill;
+    height: 100%;
+    width : 100%;
+    padding-top: 9.5rem;
+}
+   
+}

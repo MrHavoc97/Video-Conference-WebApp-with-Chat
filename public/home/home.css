@@ -1,0 +1,28 @@
+body {
+    display: flow-root;
+    background-image: url("https://images.unsplash.com/photo-1552479981-571d591f67d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80");
+    /* background-image: url('https://images.unsplash.com/5/unsplash-kitsune-3.jpg?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: #cccccc; */
+}
+.navbar{
+    display: block;
+}
+
+.footer{
+    text-align: center;
+}
+.fa-users{
+    color: white;
+}
+main{
+    display:inline ;
+}
+
+.jumbotron{
+    opacity: 0.75;
+}
+#joining-div{
+    display:none; 
+}
